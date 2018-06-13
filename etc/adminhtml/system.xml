@@ -1,0 +1,33 @@
+<?xml version="1.0" ?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+	<system>
+		<section id="log_manager" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="10" translate="label">
+			<label>Log Manager</label>
+			<tab>experius</tab>
+			<resource>Experius_LogManager::config_experius_logmanager</resource>
+
+			<group id="debug" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="10" translate="label">
+				<label>Debug</label>
+				<field id="enabled" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="10" translate="label" type="select" canRestore="1">
+					<label>enabled</label>
+					<comment>This config overules the >= 2.2 dev/debug/debug_logging config</comment>
+					<source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+				</field>
+			</group>
+
+			<group id="system" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="20" translate="label">
+				<label>System</label>
+				<field id="enabled" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="10" translate="label" type="select" canRestore="1">
+					<label>enabled</label>
+					<comment/>
+					<source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+				</field>
+				<field id="level" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="20" translate="label" type="select" canRestore="1">
+					<label>level</label>
+					<comment/>
+					<source_model>Experius\LogManager\Model\Config\Source\Level</source_model>
+				</field>
+			</group>
+		</section>
+	</system>
+</config>
