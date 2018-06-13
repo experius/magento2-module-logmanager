@@ -2,7 +2,7 @@
 
 Simply module for managing log files.
 
-    ``experius/module-logmanager``
+`experius/module-logmanager`
 
 - - -
 
